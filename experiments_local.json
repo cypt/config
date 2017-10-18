@@ -1,0 +1,32 @@
+{
+    "studies": [
+        {
+            "name": "load_events_toasts",
+            "salt": "",
+            "default_group_name": "disabled"
+        },
+        {
+            "name": "CacheClustering",
+            "salt": "",
+            "default_group_name": "disabled"
+        },
+        {
+            "name": "cache_recent_pages",
+            "salt": "cache_recent_pages",
+            "default_group_name": "default_disabled",
+            "groups": [
+                {
+                    "name": "enabled",
+                    "slots": "0-999",
+                    "params": {
+                        "enable_native_features" : "OfflineRecentPages",
+                        "recent_tabs_count" : "3",
+                        "show_copy_on_good_conection" : "true",
+                        "show_offline_warning_count" : "1",
+                        "save_page_asap" : "true"
+                    }
+                }
+            ]
+        }
+    ]
+}
